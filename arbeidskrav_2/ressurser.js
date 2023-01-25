@@ -94,3 +94,85 @@ const resources = [
         ]
     },
 ]
+
+
+
+const HTML = resources.filter((category) => category.category === "HTML")
+document.getElementById("default").innerHTML = HTML.map(data => `${data.category}`)
+document.getElementById("HTML").innerHTML =  HTML.map(data => `
+        <h2>${data.category}</h2>
+        <p>${data.text}</p>
+        <li><a href="${data.sources[0].url}">${data.sources[0].title}</a></li>
+        <li><a href="${data.sources[1].url}">${data.sources[1].title}</a></li>
+        <li><a href="${data.sources[2].url}">${data.sources[2].title}</a></li>
+`)
+
+
+
+
+const CSS = resources.filter((category) => category.category === "CSS")
+document.getElementById("default2").innerHTML = CSS.map(data => `${data.category}`)
+document.getElementById("CSS").innerHTML = CSS.map(data => `
+        <h2>${data.category}</h2>
+        <p>${data.text}</p>
+        <li><a href="${data.sources[0].url}">${data.sources[0].title}</a></li>
+        <li><a href="${data.sources[1].url}">${data.sources[1].title}</a></li>
+        <li><a href="${data.sources[2].url}">${data.sources[2].title}</a></li>
+        <li><a href="${data.sources[3].url}">${data.sources[3].title}</a></li>
+
+`)
+
+const JavaScript = resources.filter((category) => category.category === "JavaScript")
+document.getElementById("default3").innerHTML = JavaScript.map(data => `${data.category}`)
+document.getElementById("JavaScript").innerHTML = JavaScript.map(data => `
+        <h2>${data.category}</h2>
+        <p>${data.text}</p>
+        <li><a href="${data.sources[0].url}">${data.sources[0].title}</a></li>
+        <li><a href="${data.sources[1].url}">${data.sources[1].title}</a></li>
+        <li><a href="${data.sources[2].url}">${data.sources[2].title}</a></li>
+`)
+
+const React = resources.filter((category) => category.category === "React")
+document.getElementById("default4").innerHTML = React.map(data => `${data.category}`)
+document.getElementById("React").innerHTML = React.map(data => `
+        <h2>${data.category}</h2>
+        <p>${data.text}</p>
+        <li><a href="${data.sources[0].url}">${data.sources[0].title}</a></li>
+        <li><a href="${data.sources[1].url}">${data.sources[1].title}</a></li>
+        <li><a href="${data.sources[2].url}">${data.sources[2].title}</a></li>
+`)
+
+const Sanity = resources.filter((category) => category.category === "Sanity and headless CMS")
+document.getElementById("default5").innerHTML = Sanity.map(data => `${data.category}`)
+document.getElementById("Sanity").innerHTML = Sanity.map(data => `
+        <h2>${data.category}</h2>
+        <p>${data.text}</p>
+        <li><a href="${data.sources[0].url}">${data.sources[0].title}</a></li>
+        <li><a href="${data.sources[1].url}">${data.sources[1].title}</a></li>
+        <li><a href="${data.sources[2].url}">${data.sources[2].title}</a></li>
+`)
+
+
+function openCity(evt, category) {
+    var i, tabcontent, tablinks;
+
+    tabcontent = document.getElementsByClassName("tabcontent");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+    }
+  
+    tablinks = document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+    }
+
+    document.getElementById(category).style.display = "block";
+    evt.currentTarget.className += " active";
+  }
+
+  document.getElementById("default").click();
+
+   
+
+
+//https://www.w3schools.com/howto/howto_js_tabs.asp 

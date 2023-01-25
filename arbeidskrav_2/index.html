@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="CSS.css">
     <title>UIN Arbeidskrav 2</title>
 </head>
 <body>
@@ -14,7 +14,31 @@
         </h1>
     </header>
     <main>
-
+        <section class="tab">
+            <button class="tablinks" onclick="openCity(event, 'HTML')" id="default"></button>
+            <button class="tablinks" onclick="openCity(event, 'CSS')" id="default2"></button>
+            <button class="tablinks" onclick="openCity(event, 'JavaScript')" id="default3"></button>
+            <button class="tablinks" onclick="openCity(event, 'React')" id="default4"></button>
+            <button class="tablinks" onclick="openCity(event, 'Sanity')" id="default5"></button>
+        </section>
+            <section class="box">
+                <article id="HTML" class="tabcontent">
+                    <li id="HTMLs"></li>
+                </article>
+                <article id="CSS" class="tabcontent">
+                    <li id="CSSs"></li>
+                </article>
+                <article id="JavaScript" class="tabcontent">
+                    <li id="JavaScripts"></li>
+                </article>
+                <article id="React" class="tabcontent">
+                    <li id="Reacts"></li>
+                </article>
+                <article id="Sanity" class="tabcontent">
+                    <li id="Sanitys"></li>
+                </article>
+            </section>
+        
     </main>
     <script src="ressurser.js"></script>
 </body>
